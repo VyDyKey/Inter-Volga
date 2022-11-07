@@ -1,0 +1,18 @@
+<?php
+$a = yes;
+$arr = array(32, 3564, 5467, 432, 756, 34, 654,18,);
+
+$len = count($arr);
+for ($i = 0; $i < $len; $i++){
+    if (strrpos($arr[$i], "2")) {
+        $len++;
+        for ($j = $len - 1; $j > $i; $j--){
+                $arr[$j] = $arr[$j-1];
+        }        
+        $i++;
+        $arr[$i] = $a;
+    }
+}
+
+print_r($arr);
+    ?>
